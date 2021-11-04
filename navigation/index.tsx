@@ -15,10 +15,10 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import TabOneScreen from '../screens/TabOneScreen';
-//import TabTwoScreen from '../screens/TabTwoScreen';
+
 import { RootStackParamList, RootTabParamList, RootTabScreenProps, HomeParamList } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import Homescreen from '../screens/HomeScreen';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -110,7 +110,7 @@ function TabOneNavigator(){
     <HomeStack.Navigator>
       <HomeStack.Screen
         name="HomeScreen"
-        component={TabOneScreen}
+        component={Homescreen}
         options={{headerShown: false}}      
       />
     </HomeStack.Navigator>
@@ -125,7 +125,7 @@ function TabTwoeNavigator(){
     <upcomingStack.Navigator>
       <upcomingStack.Screen
         name="HomeScreen"
-        component={TabOneScreen}
+        component={Homescreen}
         options={{headerShown: false}}      
       />
     </upcomingStack.Navigator>
