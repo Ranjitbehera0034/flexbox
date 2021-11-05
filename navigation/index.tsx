@@ -19,7 +19,7 @@ import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps, HomeParamList } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 import Homescreen from '../screens/HomeScreen';
-
+import MovieDetailsScreen from '../screens/MovieDetailsScreen';
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
     <NavigationContainer
@@ -107,7 +107,15 @@ const HomeStack = createNativeStackNavigator<HomeParamList>();
 
 function TabOneNavigator(){
   return (
+    
     <HomeStack.Navigator>
+      <HomeStack.Screen
+        name="MovieDetailsScreen"
+        component={MovieDetailsScreen}
+        options={{
+          title: ''
+        }}      
+      />
       <HomeStack.Screen
         name="HomeScreen"
         component={Homescreen}

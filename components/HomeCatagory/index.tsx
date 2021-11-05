@@ -25,7 +25,8 @@ const HomeCatagory = (props: HomeCatagoryProps)=> {
             data={catagory.movies}
             renderItem={({item}) =>(
                 <Image style={styles.Image} source={{uri: item.poster}} ></Image>
-            )} horizontal/>
+            )} horizontal
+            showsHorizontalScrollIndicator={false}/>
            
         </>
     );
